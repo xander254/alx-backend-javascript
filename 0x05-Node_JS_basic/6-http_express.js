@@ -1,9 +1,9 @@
-const express = require('express');
+const express = require("express");
 
 const app = express();
 
-app.get('/', (req, res) => {
-  res.send('Hello ALX!');
+app.get("/", (req, res) => {
+  res.send("Hello ALX!");
 });
 
 app.listen(1245);
