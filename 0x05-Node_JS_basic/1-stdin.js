@@ -7,11 +7,11 @@ process.stdin.on("data", (input) => {
   console.log(`Your name is: ${name}`);
 });
 
-process.on("SIGINT", () => {
-  process.stdout.write("\nThis important software is now closing\n");
-  process.exit();
+process.stdin.on("end", () => {
+  console.log("This important software is now closing");
 });
 
-process.on("exit", () => {
-  process.stdout.write("This important software is now closing\n");
+process.on("SIGINT", () => {
+  console.log("\nThis important software is now closing");
+  process.exit();
 });
